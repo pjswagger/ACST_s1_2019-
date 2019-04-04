@@ -1,0 +1,32 @@
+#Q1a
+wget https://www.staff.hs-mittweida.de/~wuenschi/data/media/compbiolbook/chapter-10-shell-programming--triplet-stop.sh
+mv chapter-10-shell-programming--triplet-stop.sh triplet-stop.sh
+chmod u+x triplet-stop.sh
+ls -l triplet-stop.sh
+ls -l triplet-stop.sh
+
+#Q1b
+cat triplet-stop.sh
+
+#Testing the code
+./triplet-stop.sh 12345678912taa
+
+./triplet-stop.sh 123456789123taa
+
+#Q2a
+scp -i 43889573.pem tutes.txt ubuntu@ec2-52-63-69-70.ap-southeast-2.compute.amazonaws.com:
+chmod u+x tutes.txt 
+ls -l tutes.txt
+
+#Q2b
+uniq -c tutes.txt
+
+#Q3
+#Ex 11.2 
+egrep '^[^ ]+ [^ ]+ [^ ]+$' OLQ1.txt
+#Ex 11.3
+egrep -e '\-[0-9]+' OLQ1.txt --color=auto
+#Ex 11.4
+egrep -e ' [+-]?[0-9]+((.)[0-9]+)?+ ' OLQ1.txt --color=auto
+#Ex 11.6
+egrep ' hydrogenase' OLQ1.txt --color=auto
