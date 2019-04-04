@@ -29,4 +29,4 @@ egrep -e '\-[0-9]+' OLQ1.txt --color=auto
 #Ex 11.4
 egrep -e ' [+-]?[0-9]+((.)[0-9]+)?+ ' OLQ1.txt --color=auto
 #Ex 11.6
-egrep ' hydrogenase' OLQ1.txt --color=auto
+egrep 'hydrogenase' OLQ1.txt | egrep -v 'dehydrogenase'
