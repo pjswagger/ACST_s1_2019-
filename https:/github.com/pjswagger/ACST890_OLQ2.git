@@ -1,0 +1,26 @@
+#Q1a
+wget "http://www.staff.hs-mittweida.de/~wuenschi/data/media/compbiolbook/chapter-11-regex--structure.pdb"
+mv chapter-11-regex--structure.pdb structure.pdb
+sed 's/Beisel/Weisel/' structure.pdb
+
+#Q1b
+sed '1,3d' structure.pdb
+
+#Q1c
+sed -n '5,10p' structure.pdb
+
+#Q1d
+sed '/MET/d' structure.pdb
+
+#Q1e
+sed -n '/HELIX.*ILE/p' structure.pdb
+
+#Q1f
+sed '/H/s/$/***/' structure.pdb
+
+#Q1g
+sed '/SEQRES/s/^.*$/SEQ/' structure.pdb
+
+#Q1h
+scp -i 43889573.pem jabberwocky.txt ubuntu@ec2-52-63-69-70.ap-southeast-2.compute.amazonaws.com:
+sed '/^[[:space:]]*$/d' jabberwocky.txt
